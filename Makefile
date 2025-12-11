@@ -1,7 +1,7 @@
 QEMU_BASE = -M mps2-an385 -display none -monitor none -semihosting-config enable=on,target=native
 
 CC = arm-none-eabi-gcc
-CFLAGS = -mcpu=cortex-m3 -mthumb -nostartfiles -g -Og
+CFLAGS = -mcpu=cortex-m3 -mthumb -nostartfiles -g -Og --std=c99
 
 TARGET_BL = bootloader.elf
 LDFLAGS_BL = -T bootloader.ld
